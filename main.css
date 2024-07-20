@@ -244,6 +244,7 @@ hr{
     padding: 15px;
     text-align: center;
     margin: auto;
+    width: 75%;
 }
 
 .letters.finished{
@@ -262,6 +263,7 @@ hr{
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer ;
+    
 }
 
 .letters .letter-box.clicked{
@@ -318,7 +320,6 @@ hr{
         width: 565px;
         height: 200px;
         color: #fff;
-        font-size: 49pp;
         font-size: 41px;
         text-align: center;
         justify-content: center;
@@ -335,3 +336,52 @@ hr{
         background-color: #009688;
         outline: 4px solid #009688;
     }
+
+@media (max-width: 767px) {
+    .letters{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    body{
+        overflow-y: hidden;
+    }
+        .popup,
+        .greatjob{
+            width: 320px;
+            height: 140px;
+            font-size: 30px;
+    }
+}
+
+.btnRes{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border: 4px solid #009688;
+    border-radius: 5px;
+    width: 187px;
+    height: 70px;
+    font-size: 25px;
+    color: #fff;
+    background: #009688;
+    cursor: pointer;
+    display: none;
+    /* transition: .3s; */
+}
+
+#countdown{
+    z-index: 1000;
+    display: flex;
+    font-size: 100px;
+    color: #009688;
+    /* background-color: #fff; */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}

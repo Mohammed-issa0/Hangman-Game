@@ -130,6 +130,15 @@ function endGame(){
     div.appendChild(divText);
     div.className = "popup";
     document.body.appendChild(div);
+    
+    const elements = document.querySelectorAll('.endd');
+
+    elements.forEach(element => {
+        element.style.opacity = 0.5;
+    });
+
+    document.querySelector(".btnRes").style.display="block";
+
 }
 
 function GreatJob(){
@@ -138,8 +147,13 @@ function GreatJob(){
     div.appendChild(divText);
     div.className = "greatjob";
     document.body.appendChild(div);
+    const elements = document.querySelectorAll('.endd');
+    elements.forEach(element => {
+        element.style.opacity = 0.5;
+    });
+    
+    document.querySelector(".btnRes").style.display="block";
 }
-
 const spans = document.querySelectorAll('.letters-guess');
     let combinedText = '';
     spans.forEach(span => {
@@ -147,3 +161,21 @@ const spans = document.querySelectorAll('.letters-guess');
     });
 
     console.log(combinedText.length);
+
+    let btnRes = document.querySelector(".btnRes");
+    const countdownElement = document.getElementById('countdown');
+    btnRes.onclick = function(){
+        let countdown = 3;
+        countdownElement.style.display = 'block';
+        countdownElement.textContent = countdown;
+
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown === 0) {
+                clearInterval(interval);
+                location.reload();
+            }
+        }, 1000); 
+    }
