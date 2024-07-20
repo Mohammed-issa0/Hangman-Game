@@ -347,9 +347,9 @@ hr{
         align-items: center;
 
     }
-    body{
+    /* body{
         overflow-y: hidden;
-    }
+    } */
         .popup,
         .greatjob{
             width: 320px;
