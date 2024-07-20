@@ -337,15 +337,31 @@ hr{
         outline: 4px solid #009688;
     }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-height: 660px) and (max-height: 700px) {
+    .letters-guess span{
+        width: 40px;
+        height: 40px;
+    }
+        .letters-guess{
+        margin: 10px auto;
+        background-color: var(--sec-color);
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+        }
+    .hangman-draw{
+        height: 20%;
+    }
     .letters{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 5px;
         justify-content: center;
         align-items: center;
         margin: auto;
         align-items: center;
-
     }
     /* body{
         overflow-y: hidden;
@@ -356,14 +372,69 @@ hr{
             height: 140px;
             font-size: 30px;
     }
-
+    
         .letters .letter-box {
-            width: 45px;
-            height: 45px;
+            width: 25px;
+            height: 25px;
             display: inline-block;
             background-color: #009688;
             color: #fff;
-            font-size: 24px;
+            font-size: 18px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            line-height: 55px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+}
+
+@media (max-width: 767px)and (min-height: 701px) and (max-height: 950px) {
+    .letters-guess span{
+        width: 40px;
+        height: 40px;
+    }
+        .letters-guess{
+        margin: 10px auto;
+        background-color: var(--sec-color);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+        }
+    .hangman-draw{
+        height: 20%;
+    }
+    .letters{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 5px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        align-items: center;
+    }
+    /* body{
+        overflow-y: hidden;
+    } */
+        .popup,
+        .greatjob{
+            width: 320px;
+            height: 140px;
+            font-size: 30px;
+    }
+    
+        .letters .letter-box {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            background-color: #009688;
+            color: #fff;
+            font-size: 18px;
             margin-right: 10px;
             margin-bottom: 10px;
             line-height: 55px;
