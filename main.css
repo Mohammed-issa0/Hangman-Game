@@ -340,10 +340,16 @@ hr{
 @media (max-width: 767px) {
     .letters{
         display: grid;
+<<<<<<< HEAD
         grid-template-columns: repeat(6, 1fr);
         justify-content: center;
         align-items: center;
         margin: auto;
+=======
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
+        align-items: center;
+>>>>>>> f7812043a3d199a9517285025275c2e9af041645
     }
     body{
         overflow-y: hidden;
@@ -354,6 +360,7 @@ hr{
             height: 140px;
             font-size: 30px;
     }
+<<<<<<< HEAD
         .letters .letter-box {
             width: 45px;
             height: 45px;
@@ -371,6 +378,8 @@ hr{
             justify-content: center;
             align-items: center;
         }
+=======
+>>>>>>> f7812043a3d199a9517285025275c2e9af041645
 }
 
 .btnRes{
