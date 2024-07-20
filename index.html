@@ -19,7 +19,7 @@
         </div>
         <hr>
         <!-- game info----------------------------------------------------------- -->
-        <div class="row">
+        <div class="row endd">
             <div class="hangman-draw">
                 <div class="the-draw">
                     <div class="the-stand"></div>
@@ -33,10 +33,12 @@
                     </div>
                 </div>
             </div>
-            <div class="letters"></div>
         </div>
+        <div class="letters-guess end" ></div>
         <hr>
-        <div class="letters-guess"></div>
+        <div class="letters endd"></div>
+        <button class="btnRes">Restart Game</button>
+        <div id="countdown" style="display: none;"></div>
     </div>
     <audio id="success" preload="auto" src="/aud/success-1-6297.mp3"></audio>
     <audio id="fail" preload="auto" src="aud/error-10-206498.mp3"></audio>
